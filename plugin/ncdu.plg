@@ -25,12 +25,10 @@ install or upgrade dependency files
 -->
 <FILE Name="&plgPATH;/README.md" Min="6.10">
 <URL>&gitURL;/README.md</URL>
-<MD5>fd8ceec5b085b012386057c283212d31</MD5>
 </FILE>
 
 <FILE Name="&plgPATH;/ncdu.png" Min="6.10">
 <URL>&gitURL;/plugin/ncdu-small.png</URL>
-<MD5>1adf69b27813e108707ecd8531eacbcf</MD5>
 </FILE>
 
 <FILE Name="&plgPATH;/ncdu-2.3-linux-x86_64.tar.gz" Min="6.10">
