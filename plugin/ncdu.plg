@@ -23,12 +23,14 @@
 <!--
 install or upgrade dependency files
 -->
-<FILE Name="&emhttp;/README.md" Min="6.10">
+<FILE Name="&plgPATH;/README.md" Min="6.10">
 <URL>&gitURL;/README.md</URL>
+<MD5>fd8ceec5b085b012386057c283212d31</MD5>
 </FILE>
 
-<FILE Name="&emhttp;/images/ncdu.png" Min="6.10">
+<FILE Name="&plgPATH;/ncdu.png" Min="6.10">
 <URL>&gitURL;/plugin/ncdu-small.png</URL>
+<MD5>1adf69b27813e108707ecd8531eacbcf</MD5>
 </FILE>
 
 <FILE Name="&plgPATH;/ncdu-2.3-linux-x86_64.tar.gz" Min="6.10">
@@ -41,7 +43,10 @@ run the post-installation scripts
 -->
 <FILE Run="/bin/bash">
 <INLINE> 
-tar xvfz ncdu-2.3-linux-x86_64.tar.gz -C /usr/bin/
+mkdir -p &emhttp;/images
+cp -f &plgPATH;/README.md &emhttp;/README.md
+cp -f &plgPATH;/ncdu.png &emhttp;/images/ncdu.png
+tar xvfz &plgPATH;/ncdu-2.3-linux-x86_64.tar.gz -C /usr/bin/
 chmod 755 /usr/bin/ncdu
 chown root:root /usr/bin/ncdu
 
