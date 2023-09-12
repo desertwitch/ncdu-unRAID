@@ -11,7 +11,7 @@
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0" icon="terminal">
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0">
 
 <CHANGES>
 ## NCurses Disk Usage (ncdu) for UNRAID
@@ -27,8 +27,12 @@ install or upgrade dependency files
 <URL>&gitURL;/README.md</URL>
 </FILE>
 
+<FILE Name="&emhttp;/images/ncdu.png" Min="6.10">
+<URL>&gitURL;/plugin/ncdu-small.png</URL>
+</FILE>
+
 <FILE Name="&plgPATH;/ncdu-2.3-linux-x86_64.tar.gz" Min="6.10">
-<URL>https://dev.yorhel.nl/download/ncdu-2.3-linux-x86_64.tar.gz</URL>
+<URL>&gitURL;/packages/ncdu-2.3-linux-x86_64.tar.gz</URL>
 <MD5>e3fced5eccd175a4fc7271893d8c70f5</MD5>
 </FILE>
 
@@ -45,6 +49,9 @@ echo ""
 echo "-------------------------------------------------------------"
 echo " ncdu for UNRAID (&version;) has been installed."
 echo " Copyright 2023 - &author;"
+echo "-------------------------------------------------------------"
+echo "Usage in Terminal:        ncdu <directory>"
+echo "Usage Example on Array:   ncdu /mnt/user"
 echo "-------------------------------------------------------------"
 </INLINE>
 </FILE>
