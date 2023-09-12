@@ -10,7 +10,7 @@
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10.0">
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="https://forums.unraid.net/topic/145054-plugin-ncdu-ncurses-disk-usage-for-unraid/" min="6.10.0">
 
 <CHANGES>
 ## ncdu - NCurses Disk Usage for UNRAID
