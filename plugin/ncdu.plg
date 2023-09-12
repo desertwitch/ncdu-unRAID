@@ -8,9 +8,10 @@
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/ncdu-unRAID/main">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" description="test" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0">
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0" icon="square-code">
 
 <CHANGES>
 ## NCurses Disk Usage (ncdu) for UNRAID
@@ -22,6 +23,10 @@
 <!--
 install or upgrade dependency files
 -->
+<FILE Name="&emhttp;/README.md" Min="6.10">
+<URL>&gitURL;/README.md</URL>
+</FILE>
+
 <FILE Name="&plgPATH;/ncdu-2.3-linux-x86_64.tar.gz" Min="6.10">
 <URL>https://dev.yorhel.nl/download/ncdu-2.3-linux-x86_64.tar.gz</URL>
 <MD5>e3fced5eccd175a4fc7271893d8c70f5</MD5>
