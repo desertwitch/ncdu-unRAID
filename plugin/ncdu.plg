@@ -1,0 +1,63 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "ncdu">
+<!ENTITY author    "desertwitch">
+<!ENTITY version   "2023.09.12">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/ncdu-unRAID/main">
+<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;" support="" min="6.10.0">
+
+<CHANGES>
+## NCurses Disk Usage (ncdu) for UNRAID
+###2023.09.12
+- release note: welcome to the first version of the ncdu package.
+- release note: please report any problems in the support topic.
+</CHANGES>
+
+<!--
+install or upgrade dependency files
+-->
+<FILE Name="&plgPATH;/ncdu-2.3-linux-x86_64.tar.gz" Min="6.10">
+<URL>https://dev.yorhel.nl/download/ncdu-2.3-linux-x86_64.tar.gz</URL>
+<MD5>e3fced5eccd175a4fc7271893d8c70f5</MD5>
+</FILE>
+
+<!--
+run the post-installation scripts
+-->
+<FILE Run="/bin/bash">
+<INLINE> 
+tar xvfz ncdu-2.3-linux-x86_64.tar.gz -C /usr/bin/
+chmod 755 /usr/bin/ncdu
+chown root:root /usr/bin/ncdu
+
+echo ""
+echo "-------------------------------------------------------------"
+echo " ncdu for UNRAID (&version;) has been installed."
+echo " Copyright 2023 - &author;"
+echo "-------------------------------------------------------------"
+</INLINE>
+</FILE>
+
+<!--
+definition for uninstallation of the plugin
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+killall ncdu
+rm -f /usr/bin/ncdu
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " ncdu for UNRAID (&version;) has been removed."
+echo " Copyright 2023 - &author;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>
