@@ -47,8 +47,13 @@ mkdir -p &emhttp;/images
 cp -f &plgPATH;/README.md &emhttp;/README.md
 cp -f &plgPATH;/ncdu.png &emhttp;/images/ncdu.png
 tar xvfz &plgPATH;/ncdu-2.3-linux-x86_64.tar.gz -C /usr/bin/
+
 chmod 755 /usr/bin/ncdu
 chown root:root /usr/bin/ncdu
+chmod 644 &emhttp;/README.md
+chmod 644 &emhttp;/images/ncdu.png
+chown root:root &emhttp;/README.md
+chown root:root &emhttp;/images/ncdu.png
 
 echo ""
 echo "-------------------------------------------------------------"
