@@ -11,7 +11,7 @@
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
-<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0" icon="square-code">
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0" icon="terminal">
 
 <CHANGES>
 ## NCurses Disk Usage (ncdu) for UNRAID
@@ -56,6 +56,8 @@ definition for uninstallation of the plugin
 <INLINE>
 killall ncdu
 rm -f /usr/bin/ncdu
+rm -rf &emhttp;
+rm -rf &plgPATH;
 
 echo ""
 echo "-----------------------------------------------------------"
