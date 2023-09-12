@@ -14,7 +14,7 @@
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" support="" min="6.10.0">
 
 <CHANGES>
-## NCurses Disk Usage (ncdu) for UNRAID
+## ncdu - NCurses Disk Usage for UNRAID
 ###2023.09.12
 - release note: welcome to the first version of the ncdu package.
 - release note: please report any problems in the support topic.
@@ -50,9 +50,10 @@ echo "-------------------------------------------------------------"
 echo " ncdu for UNRAID (&version;) has been installed."
 echo " Copyright 2023 - &author;"
 echo "-------------------------------------------------------------"
-echo "Usage in Terminal:        ncdu <directory>"
+echo "Usage in Terminal:        ncdu \<directory\>"
 echo "Usage Example on Array:   ncdu /mnt/user"
 echo "-------------------------------------------------------------"
+echo ""
 </INLINE>
 </FILE>
 
